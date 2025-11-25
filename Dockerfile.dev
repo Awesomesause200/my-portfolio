@@ -1,0 +1,21 @@
+# Use a Node.js base image (official and stable)
+FROM node:20-alpine
+
+# Set the working directory for the application
+WORKDIR /app
+
+# Copy package.json and package-lock.json first to take advantage of Docker caching.
+# This ensures npm install only runs if dependencies change.
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application files
+COPY . .
+
+# Expose the default port for the Vite development server (or 3000 if using CRA)
+EXPOSE 5173
+
+# Command to run the development server
+CMD ["npm", "run", "dev"]

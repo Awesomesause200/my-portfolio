@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # This name is arbitrary (e.g., 'portfolio-dev')
+  frontend:
+    # Use the development Dockerfile we just created
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    
+    # Map the internal container port (5173 for Vite) to a port on your host machine (5173)
+    ports:
+      - '5173:5173'
+    
+    # Bind the local code to the container's working directory
+    # This enables real-time file synchronization and hot-reloading
+    volumes:
+      - .:/app
+      # This second volume mount is crucial: it ensures the node_modules installed inside the container
+      # doesn't get overwritten by an empty node_modules folder from your host machine.
+      - /app/node_modules
+      
+    # Set this environment variable for file watching to work reliably across different operating systems (especially Windows/Mac)
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    
+    # Keep the container running for development
+    stdin_open: true
+    tty: true
