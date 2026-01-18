@@ -1,4 +1,4 @@
-# 💻 My Professional Portfolio
+# My Professional Portfolio
 
 ## Overview
 
@@ -6,7 +6,7 @@ This repository contains the source code for my professional portfolio website, 
 
 The application is a **Single-Page Application (SPA)** built with **React** and is deployed as a static site on **AWS S3 + CloudFront**, demonstrating proficiency in cloud infrastructure, CI/CD, and front-end development.
 
-### 🌟 Key Technologies
+### Key Technologies
 
 - **Frontend:** React, JavaScript (via Vite)
 - **Environment:** Docker / docker-compose (ensuring isolated, reproducible development)
@@ -16,3 +16,10 @@ The application is a **Single-Page Application (SPA)** built with **React** and 
 ## Getting Started (Local Development)
 
 This project is fully containerized using Docker to ensure a consistent and isolated development environment.
+
+## Build Steps
+
+Build the docker container `docker compose up --build`
+Deconstruct: `docker compose down`
+
+You can also run `npm run dev` to run the code as compiled.

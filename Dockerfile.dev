@@ -8,6 +8,12 @@ WORKDIR /app
 # This ensures npm install only runs if dependencies change.
 COPY package*.json ./
 
+# --- CACHE BUSTER TRICK ---
+# Change the value of this environment variable whenever you need to force npm install to re-run.
+ARG CACHE_BUSTER=1 
+RUN echo "Cache buster v$CACHE_BUSTER" 
+# --------------------------
+
 # Install project dependencies
 RUN npm install
 
