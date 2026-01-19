@@ -23,3 +23,5 @@ Build the docker container `docker compose up --build`
 Deconstruct: `docker compose down`
 
 You can also run `npm run dev` to run the code as compiled.
+
+You can also run `npm run build` to build the finalized website to manually deploy the website if you wanted to do a manual upload.

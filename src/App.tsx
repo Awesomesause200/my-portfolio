@@ -143,9 +143,9 @@ function App() {
 			}
 			>
 			<div className="flex items-center gap-6 h-full">
-				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">🚀</div>
+				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">✅</div>
 				<div>
-				<h3 className="font-bold text-xl">Custom Auth & Inter-VPC API Data</h3>
+				<h3 className="font-bold text-xl">Custom Auth & Intra-VPC API Data</h3>
 				<p className="text-xs text-slate-400 font-mono">554K/day Transactions</p>
 				</div>
 			</div>
@@ -195,6 +195,85 @@ function App() {
 					<p className="text-[10px] text-slate-500 uppercase font-mono">Uptime</p>
 					<p className="text-lg font-bold text-indigo-400 font-mono">99.98</p>
 				</div>
+				</div>
+			</div>
+		</BentoCard>
+
+		<BentoCard 
+			title="Practices"
+			className="md:col-span-2"
+			backContent={
+				<div className="space-y-2">
+				<p>• Following rigorous code review process.</p>
+  				<p>• Experienced in end-to-end security architecture reviews.</p>
+				</div>
+			}
+			>
+			<div className="flex items-center gap-6 h-full">
+				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">🏢</div>
+				<div>
+				<h3 className="font-bold text-xl">Security Practices & Operational Excellence</h3>
+				<p className="text-xs text-slate-400 font-mono">Following best practices</p>
+				</div>
+			</div>
+		</BentoCard>
+
+		<BentoCard 
+			title="Infrastructure"
+			className="md:col-span-2" 
+			backContent={
+				<div className="space-y-2">
+					<p>• Automating deployments with Infrastructure as Code (IaC).</p>
+					<p>• Implementing CI/CD pipelines for data-driven applications.</p>
+				</div>
+			}
+		>
+			<div className="flex items-center gap-6 h-full">
+				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">🗃️</div>
+				<div>
+					<h3 className="font-bold text-xl">Modern CI/CD & DataOps</h3>
+					<p className="text-xs text-slate-400 font-mono">Automated delivery workflows</p>
+				</div>
+			</div>
+		</BentoCard>
+
+		<BentoCard 
+			title="Workflows"
+			className="md:col-span-2"
+			backContent={
+				<div className="space-y-2">
+					<p>• Engineering resilient ETL/ELT orchestration workflows.</p>
+					<p>• Implementing automated retry logic and error handling.</p>
+					<p>• Created dependency management for complex data pipelines with varying data availability SLAs.</p>
+				</div>
+			}
+		>
+			<div className="flex items-center gap-6 h-full">
+				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">⛓️</div>
+				<div>
+					<h3 className="font-bold text-xl">Pipeline Orchestration</h3>
+					<p className="text-xs text-slate-400 font-mono">Workflow & Dependency Management</p>
+				</div>
+			</div>
+		</BentoCard>
+
+		<BentoCard 
+			title="Mentorship"
+			className="md:col-span-2" 
+			backContent={
+				<div className="space-y-2">
+					<p>• Spearheading team adoption of AWS CDK v2 for repeatable infrastructure.</p>
+					<p>• Mentoring engineers on L3 construct patterns and IaC best practices.</p>
+					<p>• Enabling engineering teams to independently deliver complex cloud initiatives.</p>
+					<p>• Cultivating a culture of technical ownership through project-based mentorship.</p>
+				</div>
+			}
+		>
+			<div className="flex items-center gap-6 h-full">
+				<div className="h-12 w-12 bg-slate-800 rounded-full flex items-center justify-center text-2xl">🎓</div>
+				<div>
+					<h3 className="font-bold text-xl">Technical Leadership</h3>
+					<p className="text-xs text-slate-400 font-mono">Upskilling teams in AWS CDK v2</p>
 				</div>
 			</div>
 		</BentoCard>
