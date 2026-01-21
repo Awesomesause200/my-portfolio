@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
-import IdeVersion from "./ideversion";
+import IdeVersion from "./IdeVersion";
 import BentoVersion from "./BentoVersion";
 
 export default function App() {

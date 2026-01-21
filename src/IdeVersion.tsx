@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // --- Sub-Components for the IDE look ---
 
@@ -36,7 +36,7 @@ const SQLResultTable = () => (
 );
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('profile.json');
+  const [activeTab, _setActiveTab] = useState('profile.json');
 
   return (
     <div className="h-screen w-full flex flex-col bg-[#0d1117] text-[#c9d1d9] font-mono selection:bg-blue-500/30">
