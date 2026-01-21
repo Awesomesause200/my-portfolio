@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* This is the v4 way to define your custom IDE theme variables */
+@theme {
+  --color-terminal-bg: #0d1117;
+  --color-terminal-border: #30363d;
+  --color-terminal-text: #c9d1d9;
+  --color-code-blue: #79c0ff;
+  --color-code-green: #7ee787;
+  --color-code-orange: #ffa657;
+}
+
+/* Standard CSS still goes below or inside @utility */
+@layer base {
+  body {
+    background-color: var(--color-terminal-bg);
+    color: var(--color-terminal-text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+
+/* Custom scrollbar for the IDE feel */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
