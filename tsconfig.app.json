@@ -7,6 +7,9 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    
+    /* Crucial fix for pure JS projects */
+    "allowJs": true, 
 
     /* Bundler mode */
     "moduleResolution": "bundler",
