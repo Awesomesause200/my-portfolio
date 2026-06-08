@@ -1,46 +1,15 @@
 @import "tailwindcss";
 
-@layer utilities {
-  @keyframes ripple-effect {
-    0% {
-      transform: scale(0);
-      opacity: 0.7;
-    }
-    100% {
-      transform: scale(4);
-      opacity: 0;
-    }
+@layer base {
+  body {
+    @apply bg-[#0b0c16] text-white overflow-x-hidden font-sans;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(20, 110, 180, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.1) 0px, transparent 50%);
   }
+}
 
-    .animate-ripple {
-        animation: ripple-effect 600ms ease-out forwards;
-    }
-
-    .perspective-1000 {
-        perspective: 1000px;
-    }
-
-    .preserve-3d {
-        transform-style: preserve-3d;
-    }
-
-    .backface-hidden {
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-
-    .rotate-y-180 {
-        transform: rotateY(180deg);
-    }
-
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 4px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(129, 140, 248, 0.3); /* Indigo color */
-        border-radius: 10px;
-    }
+/* Custom glow effects for your metrics */
+.orange-glow {
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.2);
 }

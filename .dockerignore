@@ -1,0 +1,10 @@
+# Ignore Node.js dependencies (will be installed inside the container)
+node_modules
+# Ignore built output (will be built later for production)
+dist
+build
+# Ignore Docker-related files
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
