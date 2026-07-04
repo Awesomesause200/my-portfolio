@@ -10,8 +10,12 @@ export default function VoxelWorkspace() {
   const [sliceMode, setSliceMode] = useState('cumulative'); // 'single' | 'cumulative'
 
   const allVoxels = useMemo(() => {
-    return generateVoxelData(shape, { radius, majorRadius: 10, minorRadius: 4 });
-  }, [shape, radius]);
+    // Derive torus parameters dynamically based on the current radius slider
+        const majorRadius = radius;
+        const minorRadius = Math.max(1, Math.floor(radius / 2.5)); // Keeps tube thickness proportional
+
+        return generateVoxelData(shape, { radius, majorRadius, minorRadius });
+    }, [shape, radius]);
 
   const filtered3DVoxels = useMemo(() => {
     if (sliceMode === 'single') {
@@ -101,7 +105,12 @@ export default function VoxelWorkspace() {
           <VoxelScene3D voxels={filtered3DVoxels} />
         </div>
         <div className="h-full flex items-center justify-center">
-          <Map2DCanvas voxels={allVoxels} currentLayer={currentLayer} gridSize={radius * 2 + 1} />
+          <Map2DCanvas 
+            voxels={allVoxels} 
+            currentLayer={currentLayer} 
+            // Dynamically calculate the grid size based on the shape
+            gridSize={shape === 'torus' ? (radius + Math.max(1, Math.floor(radius / 2.5))) * 2 + 1 : radius * 2 + 1} 
+            />
         </div>
       </div>
     </div>
